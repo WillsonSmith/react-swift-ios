@@ -1,9 +1,24 @@
+# React Swift webview 
+
+## Very WIP
+
 ## What is this?
-This is a seleton of an iOS application written in Apple's Swift programming language that uses HTML, CSS, and JavaScript for its view layer. It has the ability to communicate between JavaScript and native Swift code. This was built from the foundations of its [OS X counterpart](https://github.com/WillsonSmith/Swift-web-hybrid-template)
 
-## Why?
-I'm a front end web developer, but I like native code. I enjoy building UI with what I'm comfortable with, but realize the limitations that exist in a native app environment. By combining web technologies and native Swift code, it's possible to create UI with comfort, but also enabling some of the more powerful features of iOS. 
+This is a project built off of what was previously my [Swift iOS web hybrid template](https://github.com/WillsonSmith/Swift-iOS-web-hybrid-template) that allowed you to use a webview, but call native code with JavaScript.
 
-We've seen this done though other platforms such as [Apache Cordova](https://cordova.apache.org/). Cordova offers a lot to developers who don't know how to write native iOS code, but I believe having direct control over what your code is doing is important. I wanted to be able to build my own native connections, ones that if something doesn't work the way I want or need it to, I can change it because I know exactly how it does or does not function. This project doesn't serve the same abilities as Cordova, it is only build for iOS apps with Swift, whereas Cordova offers many platforms. Cordova offers links to native code that you don't need to understand, but I personally prefer to know exactly what I'm using. This project is the basic building block for building whatever you need, but it's not going to get you through on its own. It's also a learning experience for me.
+This updates the project to swift 4, and adds some cleanups done in my macOS version. 
 
-This code may change quite a bit, but I will try to stick with semver, starting with the 1.0.0 release as of this commit. 
+## Getting it running
+This is in very early phases, but if you would like to try it out you can use the following steps:
+1. Clone the repo somewhere exciting like `~/documents/the-best-project-in-the-world`
+2. Make sure you have yarn or npm installed, whichever your heart desires
+4. Skip the number 3
+5. In your terminal, navigate to `react-swift-ios/web_root/react-swift-webview`
+6. run `yarn run start` or `npm run start`
+7. Open the xcode project and click run
+
+By default the project is set to go to `localhost:3000`, which should be the default output of `start`.
+
+The demo app should appear.
+
+JS -> Swift -> JS related code exists in `src/swift_specifics/globals.ts` right now.
