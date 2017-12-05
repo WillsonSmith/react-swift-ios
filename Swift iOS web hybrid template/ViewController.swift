@@ -15,12 +15,12 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     
     override func loadView() {
         let contentController = WKUserContentController();
-        contentController.addScriptMessageHandler(self, name: "callbackHandler");
+        contentController.add(self, name: "callbackHandler");
 
         let config = WKWebViewConfiguration();
         config.userContentController = contentController;
         
-        webView = WKWebView(frame: UIScreen.mainScreen().bounds, configuration: config)
+        webView = WKWebView(frame: UIScreen.main.bounds, configuration: config)
 
         view = webView;
     }
@@ -28,14 +28,14 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        let url = NSBundle.mainBundle().URLForResource("index", withExtension:"html");
-        self.webView!.loadFileURL(url!, allowingReadAccessToURL: url!);
+        let url = Bundle.main.url(forResource: "index", withExtension:"html");
+        self.webView!.loadFileURL(url!, allowingReadAccessTo: url!);
     }
     
-    func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
 
         if let messageBody:NSDictionary = message.body as? NSDictionary {
-            let functionToRun = String(messageBody.valueForKey("functionToRun")!);
+            let functionToRun = String(describing: messageBody.value(forKey: "functionToRun")!);
             switch(functionToRun) {
                 case "getCurrentVersion":
                     getCurrentVersion();
@@ -56,7 +56,7 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         }
         
         functionName = "\(functionToRun)('\(arg)')";
-        self.webView!.evaluateJavaScript(functionName, completionHandler: handleJavascriptCompletion);
+        self.webView!.evaluateJavaScript(functionName, completionHandler: handleJavascriptCompletion as? (Any?, Error?) -> Void);
     }
     
     func currentVersion() -> String {
@@ -64,12 +64,12 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     }
     
     func getCurrentVersion() {
-        executeJavascript("addVersion", argument:currentVersion())
+        executeJavascript(functionToRun: "addVersion", argument:currentVersion())
     }
     
     func handleJavascriptCompletion(object:AnyObject?, error:NSError?) -> Void {
         if (error != nil) {
-            print(error);
+            print(error ?? "");
         }
     }
     
