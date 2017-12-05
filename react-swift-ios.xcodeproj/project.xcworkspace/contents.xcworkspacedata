@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Swift iOS web hybrid template.xcodeproj">
+      location = "self:/Users/willsonsmith/Documents/dev/react-swift-ios/react-swift-ios.xcodeproj">
    </FileRef>
 </Workspace>

@@ -17,7 +17,7 @@
                BlueprintIdentifier = "9268FD8E1BFFF82E00707CBC"
                BuildableName = "Swift iOS web hybrid template.app"
                BlueprintName = "Swift iOS web hybrid template"
-               ReferencedContainer = "container:Swift iOS web hybrid template.xcodeproj">
+               ReferencedContainer = "container:react-swift-ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,7 +36,7 @@
                BlueprintIdentifier = "9268FDA21BFFF82F00707CBC"
                BuildableName = "Swift iOS web hybrid templateTests.xctest"
                BlueprintName = "Swift iOS web hybrid templateTests"
-               ReferencedContainer = "container:Swift iOS web hybrid template.xcodeproj">
+               ReferencedContainer = "container:react-swift-ios.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -46,7 +46,7 @@
             BlueprintIdentifier = "9268FD8E1BFFF82E00707CBC"
             BuildableName = "Swift iOS web hybrid template.app"
             BlueprintName = "Swift iOS web hybrid template"
-            ReferencedContainer = "container:Swift iOS web hybrid template.xcodeproj">
+            ReferencedContainer = "container:react-swift-ios.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -70,7 +70,7 @@
             BlueprintIdentifier = "9268FD8E1BFFF82E00707CBC"
             BuildableName = "Swift iOS web hybrid template.app"
             BlueprintName = "Swift iOS web hybrid template"
-            ReferencedContainer = "container:Swift iOS web hybrid template.xcodeproj">
+            ReferencedContainer = "container:react-swift-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -89,7 +89,7 @@
             BlueprintIdentifier = "9268FD8E1BFFF82E00707CBC"
             BuildableName = "Swift iOS web hybrid template.app"
             BlueprintName = "Swift iOS web hybrid template"
-            ReferencedContainer = "container:Swift iOS web hybrid template.xcodeproj">
+            ReferencedContainer = "container:react-swift-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
